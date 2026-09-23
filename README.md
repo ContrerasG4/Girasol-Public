@@ -460,22 +460,6 @@ La persona puede ingresar su nombre antes de descubrir el regalo.
 
 ## 📸 Vista previa
 
-### 🌻 Pantalla de bienvenida
-
-La experiencia comienza con una pantalla de bienvenida personalizada.
-
-![Pantalla de bienvenida](src/docs/inicio.png)
-
----
-
-### 💌 Personalización del nombre
-
-La persona puede ingresar su nombre antes de descubrir el regalo.
-
-![Validación del nombre](src/docs/validacion.png)
-
----
-
 ### 🌻 Girasol interactivo
 
 Después de completar la validación, aparece el girasol y comienza la animación de los pétalos.
