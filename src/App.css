@@ -1,0 +1,366 @@
+input {
+  width: 100%;
+  max-width: 350px;
+  padding: 14px 18px;
+
+  border: 1px solid #d8b078;
+  border-radius: 25px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 16px;
+
+  margin-top: 20px;
+}
+
+input:focus {
+  border-color: #b97928;
+  box-shadow: 0 0 0 3px rgba(185, 121, 40, 0.15);
+}
+
+.mensaje-error {
+  color: #a33a3a;
+  margin-top: 12px;
+}
+
+.pantalla-girasol {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #fff3b0 0%,
+      #f5d47b 35%,
+      #b87932 100%
+    );
+}
+
+.pantalla-girasol h1 {
+  font-size: 100px;
+  margin: 0;
+}
+
+.pantalla-girasol {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #fff5c4 0%,
+      #f6d87e 35%,
+      #d49a45 100%
+    );
+}
+
+.girasol {
+  position: relative;
+
+  width: 360px;
+  height: 360px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.petalos {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.petalo:hover {
+  filter: brightness(1.1);
+
+  transform:
+    rotate(var(--posicion))
+    translateY(-105px)
+    scale(1.08);
+}
+.petalo-seleccionado {
+  z-index: 10;
+
+  animation: salirPetalo 0.8s ease forwards !important;
+}
+.centro-girasol {
+  position: relative;
+
+  width: 130px;
+  height: 130px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #6b401f;
+
+  font-size: 55px;
+
+  z-index: 5;
+}
+
+.instruccion {
+  margin-top: 30px;
+
+  color: #633e1c;
+
+  font-size: 18px;
+}
+
+.modal-mensaje {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: rgba(70, 40, 10, 0.35);
+  backdrop-filter: blur(5px);
+
+  z-index: 20;
+}
+
+.contenido-mensaje {
+  width: 100%;
+  max-width: 450px;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  background: #fff8df;
+  border-radius: 25px;
+
+  box-shadow: 0 20px 60px rgba(70, 40, 10, 0.3);
+
+  animation: aparecerMensaje 0.4s ease;
+}
+
+.flor-modal {
+  display: block;
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.contenido-mensaje p {
+  margin: 0;
+
+  color: #633e1c;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.contenido-mensaje button {
+  margin-top: 25px;
+
+  padding: 12px 30px;
+
+  border: none;
+  border-radius: 25px;
+
+  background: #c98b35;
+  color: white;
+
+  font-family: inherit;
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease,
+              background 0.3s ease;
+}
+
+.contenido-mensaje button:hover {
+  background: #a96b20;
+  transform: scale(1.05);
+}
+
+@keyframes aparecerMensaje {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.contenedor-caida {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+
+  animation: construirPetalo 3s ease-in-out forwards;
+  animation-delay: var(--retraso);
+
+  pointer-events: none;
+}
+
+.petalo {
+  position: absolute;
+
+  width: 100px;
+  height: 150px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f5c542;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  transform: rotate(var(--posicion)) translateY(-105px);
+
+  transition: filter 0.3s ease;
+}
+@keyframes construirPetalo {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(-200px);
+  }
+
+  55% {
+    transform: translateY(0);
+  }
+
+  65% {
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes insertarPetalo {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  55% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  65% {
+    transform: rotate(var(--posicion)) translateY(-40px);
+  }
+
+  100% {
+    transform: rotate(var(--posicion)) translateY(-105px);
+  }
+}
+
+@keyframes salirPetalo {
+  0% {
+    transform:
+      rotate(var(--posicion))
+      translateY(-105px)
+      scale(1);
+  }
+
+  100% {
+    transform:
+      rotate(var(--posicion))
+      translateY(-250px)
+      scale(1.5);
+  }
+}
+.petalo-regresando {
+  animation-name: regresarPetalo !important;
+  animation-duration: 0.5s !important;
+  animation-delay: 0s !important;
+  animation-timing-function: ease-out !important;
+  animation-fill-mode: forwards !important;
+}
+@keyframes regresarPetalo {
+  0% {
+    transform:
+      rotate(var(--posicion))
+      translateY(-250px)
+      scale(1.5);
+  }
+
+  100% {
+    transform:
+      rotate(var(--posicion))
+      translateY(-105px)
+      scale(1);
+  }
+}
+.petalo-armandose {
+  animation: insertarPetalo 2.5s ease-in-out forwards;
+  animation-delay: var(--retraso);
+}
+.foto-modal {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.foto-4 {
+  object-position: center 30%;
+}
+.boton-youtube {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+
+  border-radius: 25px;
+  background: #c4302b;
+  color: white;
+
+  font-size: 14px;
+  text-decoration: none;
+
+  transition: transform 0.3s ease;
+}
+
+.boton-youtube:hover {
+  transform: scale(1.05);
+}

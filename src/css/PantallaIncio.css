@@ -1,0 +1,102 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+}
+
+.pantalla-inicio {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+
+  background: linear-gradient(
+    135deg,
+    #fff1c9,
+    #f8d8a8,
+    #e9b96e
+  );
+}
+
+.tarjeta-bienvenida {
+  width: 100%;
+  max-width: 500px;
+  padding: 50px 30px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+
+  box-shadow: 0 15px 50px rgba(117, 70, 20, 0.15);
+}
+
+.etiqueta {
+  color: #a66b25;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+h1 {
+  color: #633e1c;
+  font-size: 38px;
+  margin: 25px 0 15px;
+}
+
+.descripcion {
+  color: #805b3c;
+  font-size: 18px;
+}
+
+.boton-entrar {
+  margin-top: 25px;
+  padding: 14px 40px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: #c98b35;
+  color: white;
+
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+
+  transition: transform 0.3s ease,
+              background 0.3s ease;
+}
+
+.boton-entrar:hover {
+  background: #a96b20;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+  .pantalla-inicio {
+    padding: 16px;
+  }
+
+  .tarjeta-bienvenida {
+    padding: 40px 20px;
+    border-radius: 24px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .descripcion {
+    font-size: 16px;
+  }
+
+  .boton-entrar {
+    width: 100%;
+    max-width: 250px;
+  }
+}
