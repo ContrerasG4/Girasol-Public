@@ -23,33 +23,16 @@ input:focus {
   color: #a33a3a;
   margin-top: 12px;
 }
+/* =========================
+   PANTALLA DEL GIRASOL
+========================= */
 
 .pantalla-girasol {
   min-height: 100vh;
+  min-height: 100dvh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-
-  background:
-    radial-gradient(
-      circle at center,
-      #fff3b0 0%,
-      #f5d47b 35%,
-      #b87932 100%
-    );
-}
-
-.pantalla-girasol h1 {
-  font-size: 100px;
-  margin: 0;
-}
-
-.pantalla-girasol {
-  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
 
   display: flex;
   flex-direction: column;
@@ -67,6 +50,16 @@ input:focus {
     );
 }
 
+.pantalla-girasol h1 {
+  font-size: 100px;
+  margin: 0;
+}
+
+
+/* =========================
+   GIRASOL
+========================= */
+
 .girasol {
   position: relative;
 
@@ -76,6 +69,8 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  flex-shrink: 0;
 }
 
 .petalos {
@@ -90,6 +85,51 @@ input:focus {
 }
 
 
+/* =========================
+   PÉTALOS
+========================= */
+
+.contenedor-caida {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+
+  animation: construirPetalo 3s ease-in-out forwards;
+  animation-delay: var(--retraso);
+
+  pointer-events: none;
+}
+
+.petalo {
+  position: absolute;
+
+  width: 100px;
+  height: 150px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f5c542;
+
+  cursor: pointer;
+  pointer-events: auto;
+
+  transform:
+    rotate(var(--posicion))
+    translateY(-105px);
+
+  transition: filter 0.3s ease;
+}
+
 .petalo:hover {
   filter: brightness(1.1);
 
@@ -98,11 +138,12 @@ input:focus {
     translateY(-105px)
     scale(1.08);
 }
-.petalo-seleccionado {
-  z-index: 10;
 
-  animation: salirPetalo 0.8s ease forwards !important;
-}
+
+/* =========================
+   CENTRO
+========================= */
+
 .centro-girasol {
   position: relative;
 
@@ -130,127 +171,12 @@ input:focus {
   font-size: 18px;
 }
 
-.modal-mensaje {
-  position: fixed;
-  inset: 0;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* =========================
+   ANIMACIONES PÉTALOS
+========================= */
 
-  padding: 20px;
-
-  background: rgba(70, 40, 10, 0.35);
-  backdrop-filter: blur(5px);
-
-  z-index: 20;
-}
-
-.contenido-mensaje {
-  width: 100%;
-  max-width: 450px;
-
-  padding: 40px 30px;
-
-  text-align: center;
-
-  background: #fff8df;
-  border-radius: 25px;
-
-  box-shadow: 0 20px 60px rgba(70, 40, 10, 0.3);
-
-  animation: aparecerMensaje 0.4s ease;
-}
-
-.flor-modal {
-  display: block;
-  font-size: 55px;
-  margin-bottom: 20px;
-}
-
-.contenido-mensaje p {
-  margin: 0;
-
-  color: #633e1c;
-  font-size: 20px;
-  line-height: 1.6;
-}
-
-.contenido-mensaje button {
-  margin-top: 25px;
-
-  padding: 12px 30px;
-
-  border: none;
-  border-radius: 25px;
-
-  background: #c98b35;
-  color: white;
-
-  font-family: inherit;
-  font-size: 16px;
-
-  cursor: pointer;
-
-  transition: transform 0.3s ease,
-              background 0.3s ease;
-}
-
-.contenido-mensaje button:hover {
-  background: #a96b20;
-  transform: scale(1.05);
-}
-
-@keyframes aparecerMensaje {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-.contenedor-caida {
-  position: absolute;
-
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  opacity: 0;
-
-  animation: construirPetalo 3s ease-in-out forwards;
-  animation-delay: var(--retraso);
-
-  pointer-events: none;
-}
-
-.petalo {
-  position: absolute;
-
-  width: 100px;
-  height: 150px;
-
-  border: none;
-  border-radius: 50%;
-
-  background: #f5c542;
-
-  cursor: pointer;
-
-  pointer-events: auto;
-
-  transform: rotate(var(--posicion)) translateY(-105px);
-
-  transition: filter 0.3s ease;
-}
 @keyframes construirPetalo {
-
   0% {
     opacity: 0;
     transform: translateY(-100vh);
@@ -277,20 +203,42 @@ input:focus {
 
 @keyframes insertarPetalo {
   0% {
-    transform: rotate(0deg) translateY(0);
+    transform:
+      rotate(0deg)
+      translateY(0);
   }
 
   55% {
-    transform: rotate(0deg) translateY(0);
+    transform:
+      rotate(0deg)
+      translateY(0);
   }
 
   65% {
-    transform: rotate(var(--posicion)) translateY(-40px);
+    transform:
+      rotate(var(--posicion))
+      translateY(-40px);
   }
 
   100% {
-    transform: rotate(var(--posicion)) translateY(-105px);
+    transform:
+      rotate(var(--posicion))
+      translateY(-105px);
   }
+}
+
+.petalo-armandose {
+  animation:
+    insertarPetalo 2.5s ease-in-out forwards;
+
+  animation-delay: var(--retraso);
+}
+
+.petalo-seleccionado {
+  z-index: 10;
+
+  animation:
+    salirPetalo 0.8s ease forwards !important;
 }
 
 @keyframes salirPetalo {
@@ -308,6 +256,7 @@ input:focus {
       scale(1.5);
   }
 }
+
 .petalo-regresando {
   animation-name: regresarPetalo !important;
   animation-duration: 0.5s !important;
@@ -315,6 +264,7 @@ input:focus {
   animation-timing-function: ease-out !important;
   animation-fill-mode: forwards !important;
 }
+
 @keyframes regresarPetalo {
   0% {
     transform:
@@ -330,32 +280,152 @@ input:focus {
       scale(1);
   }
 }
-.petalo-armandose {
-  animation: insertarPetalo 2.5s ease-in-out forwards;
-  animation-delay: var(--retraso);
-}
-.foto-modal {
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-mensaje {
+  position: fixed;
+
+  inset: 0;
+
   width: 100%;
-  max-width: 350px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 20px;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px;
+
+  background: rgba(70, 40, 10, 0.35);
+
+  backdrop-filter: blur(5px);
+
+  z-index: 20;
+
+  overflow-y: auto;
+}
+
+.contenido-mensaje {
+  width: 100%;
+  max-width: 450px;
+
+  max-height: calc(100dvh - 32px);
+
+  padding: 25px 20px;
+
+  overflow-y: auto;
+
+  text-align: center;
+
+  background: #fff8df;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 20px 60px rgba(70, 40, 10, 0.3);
+
+  animation: aparecerMensaje 0.4s ease;
+}
+
+.flor-modal {
+  display: block;
+
+  font-size: 55px;
+
   margin-bottom: 20px;
 }
 
+.contenido-mensaje p {
+  margin: 0;
+
+  color: #633e1c;
+
+  font-size: 18px;
+
+  line-height: 1.55;
+}
+
+.contenido-mensaje button {
+  margin-top: 25px;
+
+  padding: 12px 30px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #c98b35;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.contenido-mensaje button:hover {
+  background: #a96b20;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   FOTO DEL MODAL
+========================= */
+
+.foto-modal {
+  display: block;
+
+  width: 100%;
+  max-width: 350px;
+
+  height: 300px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border-radius: 20px;
+
+  margin: 0 auto 20px;
+}
+
+/* Foto específica */
 .foto-4 {
   object-position: center 30%;
 }
+
+
+/* =========================
+   YOUTUBE
+========================= */
+
 .boton-youtube {
   display: inline-block;
+
   margin-top: 20px;
+
   padding: 12px 22px;
 
   border-radius: 25px;
+
   background: #c4302b;
+
   color: white;
 
   font-size: 14px;
+
   text-decoration: none;
 
   transition: transform 0.3s ease;
@@ -363,4 +433,203 @@ input:focus {
 
 .boton-youtube:hover {
   transform: scale(1.05);
+}
+
+
+/* =========================
+   ANIMACIÓN MODAL
+========================= */
+
+@keyframes aparecerMensaje {
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1);
+  }
+}
+
+
+/* =====================================================
+   IPHONE / CELULARES
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .pantalla-girasol {
+    padding: 15px;
+
+    justify-content: center;
+  }
+
+
+  /* GIRASOL MÁS PEQUEÑO */
+
+  .girasol {
+    width: 300px;
+    height: 300px;
+  }
+
+
+  /* PÉTALOS */
+
+  .petalo {
+    width: 78px;
+    height: 120px;
+
+    transform:
+      rotate(var(--posicion))
+      translateY(-88px);
+  }
+
+
+  .petalo:hover {
+    transform:
+      rotate(var(--posicion))
+      translateY(-88px)
+      scale(1.05);
+  }
+
+
+  /* CENTRO */
+
+  .centro-girasol {
+    width: 105px;
+    height: 105px;
+
+    font-size: 42px;
+  }
+
+
+  /* INSTRUCCIÓN */
+
+  .instruccion {
+    margin-top: 20px;
+
+    font-size: 16px;
+  }
+
+
+  /* MODAL */
+
+  .modal-mensaje {
+    padding: 12px;
+  }
+
+  .contenido-mensaje {
+    width: 100%;
+
+    max-width: 360px;
+
+    max-height: calc(100dvh - 24px);
+
+    padding: 20px 16px;
+
+    border-radius: 22px;
+  }
+
+
+  /* FOTO */
+
+  .foto-modal {
+    width: 100%;
+
+    height: 230px;
+
+    border-radius: 16px;
+
+    margin-bottom: 16px;
+  }
+
+
+  /* TEXTO */
+
+  .contenido-mensaje p {
+    font-size: 16px;
+
+    line-height: 1.5;
+  }
+
+
+  /* BOTÓN YOUTUBE */
+
+  .boton-youtube {
+    width: 100%;
+
+    padding: 12px 15px;
+
+    margin-top: 16px;
+  }
+
+
+  /* BOTÓN CERRAR */
+
+  .contenido-mensaje button {
+    width: 100%;
+
+    margin-top: 18px;
+  }
+}
+
+
+/* =====================================================
+   IPHONE 14 / PANTALLAS PEQUEÑAS
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .girasol {
+    width: 275px;
+    height: 275px;
+  }
+
+  .petalo {
+    width: 70px;
+    height: 108px;
+
+    transform:
+      rotate(var(--posicion))
+      translateY(-80px);
+  }
+
+  .petalo:hover {
+    transform:
+      rotate(var(--posicion))
+      translateY(-80px)
+      scale(1.05);
+  }
+
+  .centro-girasol {
+    width: 95px;
+    height: 95px;
+
+    font-size: 38px;
+  }
+
+  .instruccion {
+    margin-top: 16px;
+    font-size: 15px;
+  }
+
+  .contenido-mensaje {
+    max-width: 360px;
+
+    padding: 18px 14px;
+  }
+
+  .foto-modal {
+    height: 210px;
+  }
+
+  .contenido-mensaje p {
+    font-size: 15px;
+    line-height: 1.45;
+  }
 }
