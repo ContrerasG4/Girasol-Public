@@ -436,29 +436,69 @@ Proyecto desarrollado con:
 
 ## 📸 Vista previa
 
+## 📸 Vista previa
+
 ### 🌻 Pantalla de bienvenida
 
 La experiencia comienza con una pantalla de bienvenida personalizada.
 
-![Pantalla de bienvenida](docs/inicio.png)
+<p align="center">
+  <img src="docs/inicio.png" alt="Pantalla de bienvenida" width="700">
+</p>
+
+---
 
 ### 💌 Personalización del nombre
 
 La persona puede ingresar su nombre antes de descubrir el regalo.
 
-![Validación del nombre](docs/validacion.png)
+<p align="center">
+  <img src="docs/validacion.png" alt="Pantalla de validación del nombre" width="700">
+</p>
+
+---
 
 ### 🌻 Girasol interactivo
 
-Después de completar la validación, aparece el girasol y sus pétalos interactivos.
-![Validación del nombre](docs/girasolarmandose.png)
-![Validación del nombre](docs/girasol.png)
+Después de completar la validación, aparece el girasol y comienza la animación de los pétalos.
+
+<p align="center">
+  <img src="docs/girasolarmandose.png" alt="Girasol formando sus pétalos" width="700">
+</p>
+
+Una vez terminada la animación, el girasol queda listo para interactuar.
+
+<p align="center">
+  <img src="docs/girasol.png" alt="Girasol interactivo" width="700">
+</p>
+
+---
 
 ### 💭 Mensajes y recuerdos
 
-Cada pétalo puede abrir un recuerdo diferente con una fotografía y un mensaje personalizado.
-![Validación del nombre](docs/petalos.png)
+Cada pétalo puede seleccionarse para descubrir un mensaje acompañado de una fotografía.
+
+<p align="center">
+  <img src="docs/petalos.png" alt="Pétalos del girasol" width="700">
+</p>
+
+---
 
 ### 🎵 Mensaje especial
 
-Puedes agregar un enlace de YouTube al último mensaje para compartir una canción o video especial.
+El último mensaje puede incluir un enlace de YouTube para compartir una canción, videoclip o recuerdo especial.
+
+---
+
+## 💕 Personalízalo
+
+Puedes cambiar fácilmente:
+
+- 👤 El nombre de la persona.
+- 📸 Las fotografías.
+- 💌 Los mensajes.
+- 🎵 El enlace de YouTube.
+- 🎨 Los estilos y colores.
+- 🌻 La cantidad de pétalos.
+
+La idea es que cualquier persona pueda clonar el proyecto, personalizarlo y convertirlo en un regalo para alguien especial.
