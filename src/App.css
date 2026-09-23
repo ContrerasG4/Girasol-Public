@@ -402,9 +402,10 @@ input:focus {
 }
 
 /* Foto específica */
-.foto-4 {
+/* .foto-4 {
   object-position: center 30%;
-}
+} */
+ /* Modifica la posiciones de las fotos corresponidente a su id */
 
 
 /* =========================

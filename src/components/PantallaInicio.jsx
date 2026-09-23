@@ -5,7 +5,7 @@ function PantallaInicio({onEntrar}) {
       <div className="tarjeta-bienvenida">
         <p className="etiqueta">PARA ALGUIEN MUY ESPECIAL</p>
 
-        <h1>Hola, Mi Ratoncita.</h1>
+        <h1>Hola, (Nombre de la persona).</h1>
 
         <p className="descripcion">
           He preparado algo especial para ti.

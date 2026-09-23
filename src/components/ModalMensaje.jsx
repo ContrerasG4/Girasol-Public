@@ -20,7 +20,7 @@ function ModalMensaje({ mensaje, onCerrar }) {
             rel="noopener noreferrer"
             className="boton-youtube"
           >
-            Te la dedico.
+           Titulo a el enlace a youtube.
           </a>
         )}
         <br/>

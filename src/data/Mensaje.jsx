@@ -1,33 +1,35 @@
 const mensajes = [
+  //Puedes editar los mensajes
   {
     id: 1,
-    imagen: "/imagenes/foto1.png",
+    imagen: "/imagenes/img1.webp",
       texto:
-      "Desde que llegaste a mi vida, mis días tienen algo más bonito. Me encanta poder compartir momentos contigo y descubrir cada vez más razones para sonreír a tu lado."
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum."
   
   },
   {
     id: 2,
-    imagen: "/imagenes/foto2.jpeg",
+    imagen: "/imagenes/img2.webp",
     texto:
-      "Me gusta tu forma de ser, tu sonrisa y esa manera tan tuya de hacer especiales hasta los momentos más sencillos. Me alegra mucho haberte conocido."
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum."
   },
   {
     id: 3,
-    imagen: "/imagenes/foto4.png",
+    imagen: "/imagenes/img3.webp",
     texto:
-      "Tienes un lugar muy especial en mi corazón. Cada momento contigo se convierte en un recuerdo que quiero conservar."
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum."
  },
   {
     id: 4,
-    imagen: "/imagenes/foto3.jpeg",
-    texto: "Ojalá podamos seguir compartiendo muchos momentos bonitos. Me gusta lo que estamos construyendo, disfrutando cada conversación, cada risa y cada instante contigo(Hasta tu terquedaddddd)."
+    imagen: "/imagenes/img4.webp",
+    texto: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum."
   },
   {
     id: 5,
-    imagen: "/imagenes/foto5.png",
-    texto:"Este pequeño girasol es una forma de recordarte lo especial que eres para mí. Me gustas muchísimo y espero que podamos seguir acercándonos cada día un poquito más, Te quiero mucho mi ratoncita.(Aunque no te bañes) 🌻❤️",
-    youtube: "https://www.youtube.com/watch?v=fgXDHQm5eq4&list=RDfgXDHQm5eq4&start_radio=1"
+    imagen: "/imagenes/img5.webp",
+    texto:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
+    youtube: "https://www.youtube.com/watch?v=9FGNPT2ztow&list=RD9FGNPT2ztow&start_radio=1"
+    //en este petalo podras poner una cancion 
   }
 ];
 export default mensajes;

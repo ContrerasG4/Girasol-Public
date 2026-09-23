@@ -8,7 +8,7 @@ const [error, setError] = useState ("");
 
 
 const validarNombre = () => {
-if (nombre.trim().toLowerCase() == "maria alejandra"){
+if (nombre.trim().toLowerCase() == "nombre"){
     onValidar();
     return
 }
