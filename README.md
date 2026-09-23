@@ -443,7 +443,7 @@ Proyecto desarrollado con:
 La experiencia comienza con una pantalla de bienvenida personalizada.
 
 <p align="center">
-  <img src="docs/inicio.png" alt="Pantalla de bienvenida" width="700">
+  <img src="src/docs/inicio.png" alt="Pantalla de bienvenida" width="700">
 </p>
 
 ---
@@ -453,7 +453,7 @@ La experiencia comienza con una pantalla de bienvenida personalizada.
 La persona puede ingresar su nombre antes de descubrir el regalo.
 
 <p align="center">
-  <img src="docs/validacion.png" alt="Pantalla de validación del nombre" width="700">
+  <img src="src/docs/validacion.png" alt="Pantalla de validación del nombre" width="700">
 </p>
 
 ---
